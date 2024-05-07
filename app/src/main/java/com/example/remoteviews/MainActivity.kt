@@ -1,6 +1,7 @@
 package com.example.remoteviews
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.remoteviews.ui.theme.RemoteViewsTheme
+import io.karte.android.tracking.Tracker
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,6 +28,16 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Tracker.view("Fragment", "フラグメント")
+        showToast("onResume()")
+    }
+
+    private fun showToast(lifecycle: String) {
+        Toast.makeText(applicationContext, "call $lifecycle !", Toast.LENGTH_SHORT).show()
     }
 }
 

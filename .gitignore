@@ -13,3 +13,5 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+**/karte_android.xml
