@@ -71,4 +71,6 @@ dependencies {
     implementation ("io.karte.android:inappmessaging:2.19.0") //アプリ内メッセージ機能を提供します。
     implementation ("io.karte.android:notifications:2.11.0") //プッシュ通知の受信および効果測定機能を提供します。
     implementation ("io.karte.android:variables:2.6.0") //設定値配信機能を提供します。
+
+    implementation ("com.squareup.picasso:picasso:2.71828")
 }
